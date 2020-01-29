@@ -150,6 +150,5 @@ RUN set -ex; \
 COPY *.sh /
 COPY --chown=www-data:root config/* /var/www/html/config/
 
-USER www-data
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2-foreground"]
