@@ -142,8 +142,7 @@ RUN set -ex; \
     mkdir -p /var/www/html/custom_apps; \
     chmod +x /var/www/html/occ; \
     touch /var/www/html/data/.ocdata; \
-    chown -R www-data:root /var/www/html
-    \
+    chown -R www-data:root /var/www/html; \
     apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; \
     rm -rf /var/lib/apt/lists/*
 
